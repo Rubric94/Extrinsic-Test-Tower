@@ -1,0 +1,16 @@
+Build : PointsAndAchievements
+Level 1 Time : 00:45
+Level 2 Time : 00:45
+Level 3 Time : 00:45
+Level 4 Time : 00:45
+Time : 00:45
+Points : 10500
+/////Achievements/////
+Scrimper = True
+Wealthy = False
+Millionaire = False
+Force of Habit = False
+Loot Finder = False
+Jewel Thief = False
+Light the Way = False
+Shortcut = True

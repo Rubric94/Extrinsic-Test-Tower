@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 8e8c600ab068bba4dbba06a463ec6338
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Floor 1
+    100002: Floor 2
+    100004: Floor 2 Ceiling
+    100006: Floor 2 false wall
+    100008: Floor 3
+    100010: Floor 4
+    100012: Floor 4 Ceiling
+    100014: //RootNode
+    400000: Floor 1
+    400002: Floor 2
+    400004: Floor 2 Ceiling
+    400006: Floor 2 false wall
+    400008: Floor 3
+    400010: Floor 4
+    400012: Floor 4 Ceiling
+    400014: //RootNode
+    2100000: Base
+    2100002: Lights
+    2100004: Glass
+    2300000: Floor 1
+    2300002: Floor 2
+    2300004: Floor 2 Ceiling
+    2300006: Floor 2 false wall
+    2300008: Floor 3
+    2300010: Floor 4
+    2300012: Floor 4 Ceiling
+    3300000: Floor 1
+    3300002: Floor 2
+    3300004: Floor 2 Ceiling
+    3300006: Floor 2 false wall
+    3300008: Floor 3
+    3300010: Floor 4
+    3300012: Floor 4 Ceiling
+    4300000: Floor 2 false wall
+    4300002: Floor 4 Ceiling
+    4300004: Floor 4
+    4300006: Floor 2 Ceiling
+    4300008: Floor 3
+    4300010: Floor 2
+    4300012: Floor 1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 24dd8f21ba0ec1c4881d3226e2c7cd22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 5cdf04946e3aafa43a0e66e36bfab544, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lights
+    second: {fileID: 2100000, guid: ec814351b1d6fad47a48d3691e136421, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 6
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
