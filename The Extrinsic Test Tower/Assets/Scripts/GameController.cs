@@ -22,8 +22,8 @@ public class GameController : MonoBehaviour {
     public gameType build;
 
     float timer = 0;
-    string minutes;
-    string seconds;
+    string minutes = "";
+    string seconds = "";
 
     private string LVL1Time;
     private string LVL2Time;
@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour {
 
         if (build == gameType.CollectablesAndAchievements)
         {
+            
             countCollectables();
             CollectableTotal = (int[])CollectableCount.Clone();
 
@@ -212,6 +213,12 @@ public class GameController : MonoBehaviour {
 
             
         }
+
+        if(build == gameType.CollectablesAndPoints)
+        {
+            countCollectables();
+            CollectableTotal = (int[])CollectableCount.Clone();
+        }
         
 	}
 
@@ -230,7 +237,7 @@ public class GameController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            changer.achievementSound();
+            Debug.Log(CollectableContainers[0].transform.childCount);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -250,15 +257,16 @@ public class GameController : MonoBehaviour {
             pointsDisplay.SetActive(false);
         }
 
-        if(build == gameType.CollectablesAndAchievements || build == gameType.PointsAndAchievements)
-        {
-            
-
-        }
-        else
+        if(build != gameType.CollectablesAndAchievements && build != gameType.PointsAndAchievements)
         {
             achievementDisplay.SetActive(false);
             achievementText.SetActive(false);
+
+        }
+        
+        if(build == gameType.CollectablesAndAchievements || build == gameType.CollectablesAndPoints)
+        {
+            tallyCollectables();
         }
 
         if(build == gameType.CollectablesAndAchievements)
@@ -448,7 +456,7 @@ public class GameController : MonoBehaviour {
     {
         for (int i = 0; i < CollectableContainers.Length; i++)
         {
-            CollectableCount[i] = CollectableContainers[i].transform.hierarchyCount;
+            CollectableCount[i] = CollectableContainers[i].transform.childCount;
         }
     }
 
@@ -456,7 +464,7 @@ public class GameController : MonoBehaviour {
     {
         for(int i = 0; i<CollectableContainers.Length; i++)
             {
-                CollectableCount[i] -= CollectableContainers[i].transform.hierarchyCount;
+                CollectableCount[i] = CollectableContainers[i].transform.childCount;
             }
     }
 
@@ -470,24 +478,24 @@ public class GameController : MonoBehaviour {
         
         if(SceneManager.GetActiveScene().name == "Level1")
         {
-            path = Path.Combine(Application.streamingAssetsPath , "Test_Results_Lvl1.txt");
+            path = Path.Combine(Application.streamingAssetsPath, "Test_Results_Lvl1.txt");
 
         }
         if (SceneManager.GetActiveScene().name == "Level2")
         {
-            path = Path.Combine(Application.streamingAssetsPath ,"Test_Results_Lvl2.txt");
+            path = Path.Combine(Application.streamingAssetsPath, "Test_Results_Lvl2.txt");
         }
 
-        using (var stream = new FileStream(path, FileMode.Append))
+        using (var stream = new FileStream(path, FileMode.Truncate))
         {
             using (var writer = new StreamWriter(stream))
             {
                 //STATS GO HERE!
                 writer.WriteLine($"Build : {build}");
-                writer.WriteLine($"Level 1 Time : {minutes}:{seconds}");
-                writer.WriteLine($"Level 2 Time : {minutes}:{seconds}");
-                writer.WriteLine($"Level 3 Time : {minutes}:{seconds}");
-                writer.WriteLine($"Level 4 Time : {minutes}:{seconds}");
+                //writer.WriteLine($"Level 1 Time : {minutes}:{seconds}");
+                //writer.WriteLine($"Level 2 Time : {minutes}:{seconds}");
+                //writer.WriteLine($"Level 3 Time : {minutes}:{seconds}");
+                //writer.WriteLine($"Level 4 Time : {minutes}:{seconds}");
                 writer.WriteLine($"Time : {minutes}:{seconds}");
 
                 if (build == gameType.PointsAndAchievements || build == gameType.CollectablesAndPoints)

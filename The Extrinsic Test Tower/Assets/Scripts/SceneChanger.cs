@@ -25,16 +25,6 @@ public class SceneChanger : MonoBehaviour {
             GameObject.Find("IDDisplay").GetComponent<Text>().text = $"ID = {participantID}";
         }
 
-        if(SceneManager.GetActiveScene().name == "Questionnair1")
-        {
-            GameObject.Find("next").GetComponent<Button>().onClick.AddListener(delegate { changeScene("Level2"); });
-        }
-
-        if (SceneManager.GetActiveScene().name == "Questionnair2")
-        {
-            GameObject.Find("next").GetComponent<Button>().onClick.AddListener(delegate { changeScene("EndScreen"); });
-
-        }
 
         if(SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
